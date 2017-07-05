@@ -20,11 +20,16 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello world!')
 
-class MainHandler(webapp2.RequestHandler):
+class FormHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        data = (self.request.get('name') +
+         self.request.get('size') +
+         self.request.get('cheese') +
+         self.request.get('toppings') +
+         self.request.get('checkout'))
+        self.response.write(data)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/submission' FormHandler),
+    ('/submission', FormHandler),
 ], debug=True)

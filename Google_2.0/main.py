@@ -29,6 +29,10 @@ class PassHandler(webapp2.RequestHandler):
         password= self.request.get("password")
         self.response.write(username + "" + password)
 
+        if username==real_name and password==real_pass
+        print "Whoopty do, you knew your account info"
+        else "Try again kid"
+
 class FormHandler(webapp2.RequestHandler):
     def get(self):
         data = (self.request.get('name') +

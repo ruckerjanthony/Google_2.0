@@ -22,7 +22,12 @@ class MainHandler(webapp2.RequestHandler):
 class PassHandler(webapp2.RequestHandler):
     def post(self):
         self.response.write('post handler')
+        real_name="josh"
+        real_pass="Anthony"
 
+        username= self.request.get("username")
+        password= self.request.get("password")
+        self.response.write(username + "" + password)
 
 class FormHandler(webapp2.RequestHandler):
     def get(self):

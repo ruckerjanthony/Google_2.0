@@ -44,7 +44,7 @@ jinja_environment = jinja2.Environment(
 
 class TempHandler(webapp2.RequestHandler)
         def get(self):
-            self.request.get()
+        
 
 class FormHandler(webapp2.RequestHandler):
     def get(self):

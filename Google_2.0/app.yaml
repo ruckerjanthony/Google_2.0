@@ -11,10 +11,15 @@ handlers:
 - url: /static/(.*)
   static_files: static/\1
   upload: static/(.*)
+
 - url: .*
   script: main.app
 
-
+ libraries:
+- name: jinja2
+  version: latest
+- name: webapp2
+  version: "2.5.2"
 
 libraries:
 - name: webapp2

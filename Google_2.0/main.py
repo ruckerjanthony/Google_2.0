@@ -19,6 +19,9 @@ import webapp2
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello world!')
+class PassHandler(webapp2.RequestHandler):
+    def post(self):
+        
 
 class FormHandler(webapp2.RequestHandler):
     def get(self):

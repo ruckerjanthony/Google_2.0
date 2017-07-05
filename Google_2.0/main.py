@@ -21,6 +21,7 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write('Hello world!')
 class PassHandler(webapp2.RequestHandler):
     def post(self):
+        self.response.write('post handler')
 
 
 class FormHandler(webapp2.RequestHandler):

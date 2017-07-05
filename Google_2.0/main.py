@@ -14,6 +14,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+import jinja2
+
+#set up environment for Jinja
+#this sets jinja's relative directory to match the directory name(dirname) of
+#the current __file__, in this case, main.py
+jinja_environment = jinja2.Environment(
+  template= loader=jinja2.FileSystemLoader(os.path.dirname("templates"))
+
+
+import jinja2
+import os
+import webapp2
+
+#set up environment for Jinja
+#this sets jinja's relative directory to match the directory name(dirname) of
+#the current __file__, in this case, main.py
+jinja_environment = jinja2.Environment(
+  loader=jinja2.FileSystemLoader(os.path.dirname("templates"))
+
 import webapp2
 
 class MainHandler(webapp2.RequestHandler):
@@ -36,11 +56,7 @@ class PassHandler(webapp2.RequestHandler):
 
 class TempHandler(webapp2.RequestHandler)
         def get(self):
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 3cd84b5a4085c14fd7b8e46081389a3bbf49fc81
 
 class FormHandler(webapp2.RequestHandler):
     def get(self):

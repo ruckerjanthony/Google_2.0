@@ -27,12 +27,20 @@ class PassHandler(webapp2.RequestHandler):
 
         username= self.request.get("username")
         password= self.request.get("password")
-        
+
 
         if username==real_name and password==real_pass:
             self.response.write("Whoopty do, you knew your account info")
         else:
             self.response.write("Try again kid")
+        import jinja2
+
+#set up environment for Jinja
+#this sets jinja's relative directory to match the directory name(dirname) of
+#the current __file__, in this case, main.py
+jinja_environment = jinja2.Environment(
+  loader=jinja2.FileSystemLoader(os.path.dirname("templates")))
+
 
 
 class FormHandler(webapp2.RequestHandler):

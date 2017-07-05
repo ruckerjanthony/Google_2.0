@@ -36,7 +36,11 @@ class PassHandler(webapp2.RequestHandler):
 
 class TempHandler(webapp2.RequestHandler)
         def get(self):
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 3cd84b5a4085c14fd7b8e46081389a3bbf49fc81
 
 class FormHandler(webapp2.RequestHandler):
     def get(self):
